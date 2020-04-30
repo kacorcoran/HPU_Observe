@@ -34,7 +34,36 @@ Now that the virtual environment is setup, navigate to the directory that you wi
 ```sh
 > git clone https://github.com/kacorcoran/HPU_Reduce.git
 ```
-Now execute the setup.py file with the command:
+To create all the directories used by HPU_Reduce, you can run the setup.py file with the command:
 ```sh
 > python setup.py
+```
+```
+Key:
+(T) = Top directory   (I) = Intermediate directory   (S) = Subdirectory
+
+(T) Directory in your desired location where you place HPU_Reduce.py
+    (I) raw_frames
+         ⃝ place your science frames here
+            - This assumes you have removed images which are not usable (e.g., smearing from telescope bump)
+    (I) cal_frames
+         ⃝ place your calibration frames here
+            - Leave this directory empty if you have not taken cals yet
+            - To run without
+        (S) bias_frames
+            ⃝ bias frames will be placed here if you don't place them here
+            ⃝ master bias frame will be created and placed here
+        (S) dark_frames
+            ⃝ dark frames will be placed here if you don't place them here
+            ⃝ master dark frame will be created and placed here
+        (S) flat_frames
+            ⃝ flat frames will be placed here if you don't place them here
+            ⃝ master flat frame will be created and placed here
+    (I) red_frames
+         ⃝ reduced science frames will be placed here
+    (I) file_outputs
+         ⃝ any text files created for analysis will be placed here
+            - all text files will be space separated
+            - use pd.read_csv('file.txt', sep=' ', header=0) to read in output files
+    (I) plots
 ```
