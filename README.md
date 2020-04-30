@@ -46,3 +46,4 @@ Directory Key:
 (I) = Intermediate directory   
 (S) = Subdirectory
 ![file tree diagram](file_tree.png)
+![logo](logo.png)
