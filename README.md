@@ -1,6 +1,6 @@
 # HPU_Reduce
-## The <ins>H</ins>elpful-<ins>P</ins>hotometric-<ins>U</ins>ranoscopy Reduction Code
-Photometry reduction and analysis code specialized for quick, on-site analysis of data.  This is built with the CTIO/SMARTS 0.9m in mind, but a telescope reference file can be updated to generalize this to other telescopes.
+## The <ins>H</ins>elpful-<ins>P</ins>hotometric-<ins>U</ins>ranoscopy Reduction and Analysis Code
+Aperture photometry reduction and analysis code specialized for quick, on-site analysis of data.  This is built with the CTIO/SMARTS 0.9m in mind, but a telescope reference file can be updated to generalize this to other telescopes.
 
 ## Installing HPU_Reduce
 ### Virtual Environment Setup
@@ -29,16 +29,18 @@ This is due to the command prompt not being a supported terminal to run ```conda
 > conda deactivate
 ```
 The subsequent instructions will still work if you do not use a virtual environment; however, it is good practice to use virtual environments to avoid dependency issues.
-### Cloning the Github Repository and Setup
+### Cloning the Github Repository
 Now that the virtual environment is setup, navigate to the directory that you wish to run HPU_Reduce in.  We will now clone the repository containing HPU_Reduce and its constituent files.  You can do this by downloading the ```.zip``` file from github or running the following command in your terminal:
 ```sh
 > git clone https://github.com/kacorcoran/HPU_Reduce.git
 ```
+### File Structure Setup
 To create all the directories used by HPU_Reduce, you can run the setup.py file with the command:
 ```sh
 > python setup.py
 ```
 Below is a sketch (with a key) of the file structure that is created and subsequently used by HPU_Reduce.  You will have to place your raw science frames in the ```raw_frames``` directory for HPU_Reduce to run.  Calibration frames can be placed in the ```cal_frames``` directory directly or you can sort them into their respective subdirectories if you wish.  Calibration frames are not necessary for HPU_Reduce to run, but you must specify this in the ```analysis_options``` file using ```"calibration": False```.  You do not have to use this file structure if you don't like it - just make the modifications that suit your workflow.
+
 Directory Key:
 (T) = Top directory   
 (I) = Intermediate directory   

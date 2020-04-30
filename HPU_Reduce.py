@@ -1,9 +1,10 @@
 """
-HPU_Reduce --- The Helpful Photometric Uranoscopy Reduction Code
+----------------------------------------------------------------------------------------------------------
+HPU_Reduce --- The Helpful Photometric Uranoscopy Reduction and Analysis Code
 Kyle Corcoran - University of Virginia
 kac8aj@virginia.edu
 2020
-
+----------------------------------------------------------------------------------------------------------
 Prerequisites:
     1) Written in Python 3 (may work in 2.7 - will check later)
     2) Installation of the following packages (assuming they are not already installed or default):
@@ -11,7 +12,7 @@ Prerequisites:
         ⃝ astropy (this is probably gonna cause a numpy error with photutils at some point)
         ⃝ ccdproc
         ⃝ photutils
-
+----------------------------------------------------------------------------------------------------------
 File Structure Setup:
     Run the setup.py file in the repository to create the directories necessary for HPU_Reduce.
     I have included some of the same directory creation code here just in case, but, at a minimum,
@@ -21,7 +22,8 @@ File Structure Setup:
     (T) Directory in your desired location where you place HPU_Reduce.py
         (M) raw_frames
              ⃝ place your science frames here
-                - This assumes you have removed images which are not usable (e.g., smearing from telescope bump)
+                - This assumes you have removed images which are not usable
+                  (e.g., smearing from telescope bump)
         (M) cal_frames
              ⃝ place your calibration frames here
                 - Leave this directory empty if you have not taken cals yet
@@ -41,7 +43,7 @@ File Structure Setup:
              ⃝ any text files created for analysis will be placed here
                 - all text files will be space separated
                 - use pd.read_csv('file.txt', sep=' ', header=0) to read in output files
-
+----------------------------------------------------------------------------------------------------------
 
 creates /reduced/cals/ and /reduced/data/
 """
