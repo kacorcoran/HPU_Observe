@@ -6,7 +6,7 @@ kac8aj@virginia.edu
 
 Prerequisites:
     1) Written in Python 3 (may work in 2.7 - will check later)
-    2) Installation of the following packages:
+    2) Installation of the following packages (assuming they are not already installed):
         ⃝ tqdm
         ⃝ astropy
         ⃝ ccdproc
