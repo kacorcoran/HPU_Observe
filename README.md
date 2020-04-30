@@ -38,32 +38,9 @@ To create all the directories used by HPU_Reduce, you can run the setup.py file 
 ```sh
 > python setup.py
 ```
+Below is a sketch (with a key) of the file structure that is created and subsequently used by HPU_Reduce.  You will have to place your raw science frames in the ```raw_frames``` directory for HPU_Reduce to run.  Calibration frames can be placed in the ```cal_frames``` directory directly or you can sort them into their respective subdirectories if you wish.  Calibration frames are not necessary for HPU_Reduce to run, but you must specify this in the ```analysis_options``` file using ```"calibration": False```.  You do not have to use this file structure if you don't like it - just make the modifications that suit your workflow.
 ```
-Key:
+![file tree](file_tree.png)
+Directory Key:
 (T) = Top directory   (I) = Intermediate directory   (S) = Subdirectory
-
-(T) Directory in your desired location where you place HPU_Reduce.py
-    (I) raw_frames
-         ⃝ place your science frames here
-            - This assumes you have removed images which are not usable (e.g., smearing from telescope bump)
-    (I) cal_frames
-         ⃝ place your calibration frames here
-            - Leave this directory empty if you have not taken cals yet
-            - To run without
-        (S) bias_frames
-            ⃝ bias frames will be placed here if you don't place them here
-            ⃝ master bias frame will be created and placed here
-        (S) dark_frames
-            ⃝ dark frames will be placed here if you don't place them here
-            ⃝ master dark frame will be created and placed here
-        (S) flat_frames
-            ⃝ flat frames will be placed here if you don't place them here
-            ⃝ master flat frame will be created and placed here
-    (I) red_frames
-         ⃝ reduced science frames will be placed here
-    (I) file_outputs
-         ⃝ any text files created for analysis will be placed here
-            - all text files will be space separated
-            - use pd.read_csv('file.txt', sep=' ', header=0) to read in output files
-    (I) plots
 ```
