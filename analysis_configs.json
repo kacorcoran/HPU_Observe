@@ -8,7 +8,7 @@
     "aperture_selection_method": "std_dev_scatter",
     "include_errors": false,
     "sky_subtraction_method": "annulus",
-    "inner_annulus_radius": 7,
-    "outer_annulus_radius": 9
+    "single_inner_annulus_radius": 7,
+    "single_outer_annulus_radius": 9
   }
 }

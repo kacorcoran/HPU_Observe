@@ -17,32 +17,36 @@ File Structure Setup:
     Run the setup.py file in the repository to create the directories necessary for HPU_Reduce.
     I have included some of the same directory creation code here just in case, but, at a minimum,
     the raw_frames directory needs to be made and contain the raw science frames for the code to run.
-    (T) = Top directory   (M) = Middle/Intermediate directory   (B) = Bottom directory
+    (T) = Top directory   (I) = Middle/Intermediate directory   (S) = Bottom directory
 
     (T) Directory in your desired location where you place HPU_Reduce.py
-        (M) raw_frames
+        (I) raw_frames
              ⃝ place your science frames here
                 - This assumes you have removed images which are not usable
                   (e.g., smearing from telescope bump)
-        (M) cal_frames
+        (I) cal_frames
              ⃝ place your calibration frames here
                 - Leave this directory empty if you have not taken cals yet
                 - To run without
-            (B) bias_frames
+            (S) bias_frames
                 ⃝ bias frames will be placed here if you don't place them here
                 ⃝ master bias frame will be created and placed here
-            (B) dark_frames
+            (S) dark_frames
                 ⃝ dark frames will be placed here if you don't place them here
                 ⃝ master dark frame will be created and placed here
-            (B) flat_frames
+            (S) flat_frames
                 ⃝ flat frames will be placed here if you don't place them here
                 ⃝ master flat frame will be created and placed here
-        (M) red_frames
+        (I) red_frames
              ⃝ reduced science frames will be placed here
-        (M) file_outputs
+        (I) file_outputs
              ⃝ any text files created for analysis will be placed here
                 - all text files will be space separated
                 - use pd.read_csv('file.txt', sep=' ', header=0) to read in output files
+            (S) logs
+                ⃝ log files from each run will be placed here
+            (S) data_sheets
+                ⃝ data sheets from each run will be placed here
 ----------------------------------------------------------------------------------------------------------
 Creates:
     1) Plots and whatnot

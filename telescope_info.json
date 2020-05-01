@@ -1,10 +1,14 @@
 {
   "CTIO_0.9m":
   {
-    "exptime":"EXPTIME",
-    "ra":"RA",
-    "dec":"DEC",
-    "date-obs":"DATE-OBS"
+    "exptime": "EXPTIME",
+    "ra": "RA",
+    "dec": "DEC",
+    "date-obs": "DATE-OBS",
+    "observatory_latitude": "-30:10:07.90",
+    "observatory_longitude": "-70:48:23.86",
+    "observatory_elevation": 2241.4,
+    "focal-ratio": "f/13.5"
   },
 
   "ARCSAT_0.5m":
@@ -12,6 +16,10 @@
     "exptime":"EXPTIME",
     "ra":"OBJCTRA",
     "dec":"OBJCTDEC",
-    "date-obs":"DATE-OBS"
+    "date-obs":"DATE-OBS",
+    "observatory_latitude": 3.27802777778E+001,
+    "observatory_longitude": -1.05820277778E+002,
+    "observatory_elevation": 2.78800000000E+003,
+    "focal-ratio": "f/8.0"
   }
 }
