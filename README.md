@@ -39,7 +39,7 @@ To create all the directories used by HPU_Reduce, you can run the setup.py file 
 ```sh
 > python setup.py
 ```
-Below is a sketch (with a key) of the file structure that is created and subsequently used by HPU_Reduce.  You will have to place your raw science frames in the ```raw_frames``` directory for HPU_Reduce to run.  Calibration frames can be placed in the ```cal_frames``` directory directly or you can sort them into their respective subdirectories if you wish.  Calibration frames are not necessary for HPU_Reduce to run, but you must specify this in the ```analysis_configs``` file using ```"calibration": false```.  You do not have to use this file structure if you don't like it - just make the modifications that suit your workflow.
+Below is a sketch (with a key) of the file structure that is created by setup.py and subsequently used by HPU_Reduce.  Simply place all of your USEABLE science and calibration frames (i.e., you removed or fixed files that have incorrect headers or data problems such as star-smearing from tracking turning off) in the top directory and they will be sorted into their respective directories.  You can also sort the frames into their respective directories by hand if that's your cup of tea.  Calibration frames are not necessary for HPU_Reduce to run, but you must specify this in the ```analysis_configs``` file using ```"calibration": false```.  You do not have to use this file structure if you don't like it - just make the modifications that suit your workflow.
 
 Directory Key:<br/>
 (T) = Top directory       (I) = Intermediate directory      (S) = Subdirectory
