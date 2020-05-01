@@ -1,0 +1,17 @@
+{
+  "CTIO_0.9m":
+  {
+    "exptime":"EXPTIME",
+    "ra":"RA",
+    "dec":"DEC",
+    "date-obs":"DATE-OBS"
+  },
+
+  "ARCSAT_0.5m":
+  {
+    "exptime":"EXPTIME",
+    "ra":"OBJCTRA",
+    "dec":"OBJCTDEC",
+    "date-obs":"DATE-OBS"
+  }
+}

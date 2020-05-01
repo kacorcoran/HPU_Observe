@@ -1,0 +1,14 @@
+{
+"analysis_configs":
+  {
+    "calibration": false,
+    "target_star_is_guide_star": false,
+    "number_of_comp_stars": 3,
+    "single_aperture_radius": 4,
+    "aperture_selection_method": "std_dev_scatter",
+    "include_errors": false,
+    "sky_subtraction_method": "annulus",
+    "inner_annulus_radius": 7,
+    "outer_annulus_radius": 9
+  }
+}

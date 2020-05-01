@@ -1,6 +1,6 @@
 ![logo](logo.png)
 ## The <ins>H</ins>elpful-<ins>P</ins>hotometric-<ins>U</ins>ranoscopy Reduction and Analysis Code
-Aperture photometry reduction and analysis code specialized for quick, on-site analysis of data.  This is built with the CTIO/SMARTS 0.9m in mind, but a telescope reference file can be updated to generalize this to other telescopes.
+Aperture photometry reduction and analysis code specialized for quick, on-site analysis of time-series data.  This is built with the CTIO/SMARTS 0.9m in mind, but a telescope reference file can be updated to generalize this to other telescopes.
 
 ## Installing HPU_Reduce
 ### Virtual Environment Setup
@@ -41,7 +41,7 @@ To create all the directories used by HPU_Reduce, you can run the setup.py file 
 ```
 Below is a sketch (with a key) of the file structure that is created and subsequently used by HPU_Reduce.  You will have to place your raw science frames in the ```raw_frames``` directory for HPU_Reduce to run.  Calibration frames can be placed in the ```cal_frames``` directory directly or you can sort them into their respective subdirectories if you wish.  Calibration frames are not necessary for HPU_Reduce to run, but you must specify this in the ```analysis_options``` file using ```"calibration": False```.  You do not have to use this file structure if you don't like it - just make the modifications that suit your workflow.
 
-Directory Key:
+Directory Key:<br/>
 (T) = Top directory   
 (I) = Intermediate directory   
 (S) = Subdirectory

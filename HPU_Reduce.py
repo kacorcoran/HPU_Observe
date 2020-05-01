@@ -44,8 +44,8 @@ File Structure Setup:
                 - all text files will be space separated
                 - use pd.read_csv('file.txt', sep=' ', header=0) to read in output files
 ----------------------------------------------------------------------------------------------------------
-
-creates /reduced/cals/ and /reduced/data/
+Creates:
+    1) Plots and whatnot
 """
 
 import pandas as pd
