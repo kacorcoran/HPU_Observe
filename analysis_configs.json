@@ -1,7 +1,10 @@
 {
 "analysis_configs":
   {
+    "telescope": "ARCSAT_0.5m",
     "calibration": false,
+    "calibration_combine_method": "median",
+    "flats_used": "dome",
     "target_star_is_guide_star": false,
     "number_of_comp_stars": 3,
     "single_aperture_radius": 4,

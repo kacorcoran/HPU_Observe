@@ -35,11 +35,15 @@ Now that the virtual environment is setup, navigate to the directory that you wi
 > git clone https://github.com/kacorcoran/HPU_Reduce.git
 ```
 ### File Structure Setup
-To create all the directories used by HPU_Reduce, you can run the setup.py file with the command:
-```sh
-> python setup.py
+To create all the directories used, HPU_Reduce runs the ```check_directories()``` function.  This will return a dictionary containing all the directories and their respective paths for file sorting.  The line in HPU_Reduce that does this looks like this:
+```python
+dir_paths = check_directories()
 ```
-Below is a sketch (with a key) of the file structure that is created by setup.py and subsequently used by HPU_Reduce.  Simply place all of your USEABLE science and calibration frames (i.e., you removed or fixed files that have incorrect headers or data problems such as star-smearing from tracking turning off) in the top directory and they will be sorted into their respective directories.  You can also sort the frames into their respective directories by hand if that's your cup of tea.  Calibration frames are not necessary for HPU_Reduce to run, but you must specify this in the ```analysis_configs``` file using ```"calibration": false```.  You do not have to use this file structure if you don't like it - just make the modifications that suit your workflow.
+Below is a sketch (with a key) of the file structure that is created and subsequently used by HPU_Reduce.  Simply place all of your USEABLE science and calibration frames (i.e., you removed or fixed files that have incorrect headers or data problems such as star-smearing from the tracking turning off) in the top directory and they will be sorted into their respective directories by the ```sort_frames()``` function which is called like this in the code:
+```python
+sort_frames(cal_paths)
+```
+You can also sort the frames into their respective directories by hand if that's your cup of tea.  Calibration frames are not necessary for HPU_Reduce to run, but you must specify this in the ```analysis_configs``` file using ```"calibration": false```.  You do not have to use this file structure if you don't like it - just make the modifications that suit your workflow.
 
 Directory Key:<br/>
 (T) = Top directory       (I) = Intermediate directory      (S) = Subdirectory
